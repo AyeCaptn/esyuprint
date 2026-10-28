@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Main.qml</file>
+    <file>PrintWindow.qml</file>
+    <file>PrintSettings.qml</file>
+    <file>ActionButton.qml</file>
+    <file>SectionHeading.qml</file>
+    <file>SpoolDialog.qml</file>
+    <file>SpoolTextField.qml</file>
+    <file>SpoolComboBox.qml</file>
+    <file>SpoolTextArea.qml</file>
+    <file>SpoolSpinBox.qml</file>
+    <file>SpoolCheckBox.qml</file>
+    <file>bridge.py</file>
+    <file>demo.json</file>
+    <file>i18n/en.json</file>
+    <file>i18n/nl.json</file>
+    <file>i18n/da.json</file>
+    <file alias="esyuprint.svg">../pkgbuild/esyuprint.svg</file>
+    <file alias="SKILL.md">../.agents/skills/esyuprint-update/SKILL.md</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,25 @@
+[tools]
+uv = "0.13.6"
+
+[tasks.setup]
+description = "Install locked development dependencies (no system packages)"
+run = "uv sync --locked --python /usr/bin/python3"
+
+[tasks.build]
+run = "make build"
+
+[tasks.run]
+run = "make run"
+
+[tasks.check]
+run = "make check"
+
+[tasks.check-all]
+run = "make check-all"
+
+[tasks.format]
+run = "make format"
+
+[tasks.upstream]
+description = "Read installed versions and upstream tags; never update automatically"
+run = "bash scripts/upstream.sh"

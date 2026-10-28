@@ -1,0 +1,10 @@
+QT += core gui qml quick quickcontrols2 dbus concurrent testlib
+CONFIG += link_pkgconfig
+PKGCONFIG += gtk+-unix-print-3.0
+CONFIG += c++17 testcase
+TARGET = esyuprint_tests
+TEMPLATE = app
+INCLUDEPATH += ../src
+HEADERS += ../src/backend.h ../src/theme.h ../src/translator.h ../src/portal.h ../src/printportal.h ../src/printjob.h ../src/rowmodel.h
+SOURCES += spool_tests.cpp ../src/backend.cpp ../src/theme.cpp ../src/translator.cpp ../src/portal.cpp ../src/printportal.cpp ../src/printjob.cpp ../src/rowmodel.cpp
+RESOURCES += ../src/resources.qrc

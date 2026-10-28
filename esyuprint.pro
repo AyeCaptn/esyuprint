@@ -1,0 +1,10 @@
+QT += core gui qml quick quickcontrols2 dbus concurrent
+CONFIG += link_pkgconfig
+PKGCONFIG += gtk+-unix-print-3.0
+CONFIG += c++17 release
+TARGET = esyuprint
+TEMPLATE = app
+HEADERS += src/backend.h src/theme.h src/translator.h src/portal.h src/printportal.h src/printjob.h src/rowmodel.h
+SOURCES += src/main.cpp src/backend.cpp src/theme.cpp src/translator.cpp src/portal.cpp src/printportal.cpp src/printjob.cpp src/rowmodel.cpp
+RESOURCES += src/resources.qrc
+QMAKE_CXXFLAGS += -Wall -Wextra

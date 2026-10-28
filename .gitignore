@@ -1,0 +1,8 @@
+/build/
+/.venv/
+/.pytest_cache/
+/.ruff_cache/
+__pycache__/
+/pkgbuild/pkg/
+/pkgbuild/src/
+*.pkg.tar.*

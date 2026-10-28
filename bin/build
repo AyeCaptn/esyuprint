@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+command -v qmake6 >/dev/null
+command -v make >/dev/null
+mkdir -p build
+cd build
+qmake6 ../esyuprint.pro
+make -j"${JOBS:-$(nproc)}"

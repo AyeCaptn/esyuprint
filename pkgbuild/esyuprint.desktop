@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=esyuprint
+Name[nl]=esyuprint
+Name[da]=esyuprint
+Comment=Printer management that follows your Omarchy theme
+Comment[nl]=Printerbeheer met je Omarchy-thema
+Comment[da]=Printerstyring med dit Omarchy-tema
+Exec=esyuprint open
+Icon=esyuprint
+Terminal=false
+Categories=Settings;HardwareSettings;Printing;
+Keywords=Printer;CUPS;Queue;Ink;
+StartupWMClass=esyuprint

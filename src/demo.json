@@ -1,0 +1,18 @@
+{
+  "snapshot": {
+    "printers": [
+      {"name": "Studio_Printer", "label": "Studio printer", "model": "OfficeJet · IPP Everywhere", "location": "Downstairs studio", "state": 3, "reasons": ["marker-supply-low-warning"], "message": "Ready · cyan ink is running low", "default": true, "class": false, "shared": false, "uri": "ipp://printer.example/ipp/print"},
+      {"name": "Office_Laser", "label": "Office laser", "model": "Laser printer · driverless", "location": "Upstairs office", "state": 3, "reasons": [], "default": false, "class": false, "shared": true, "uri": "ipp://laser.example/ipp/print"}
+    ],
+    "jobs": [{"id": 42, "job-name": "Quarterly report.pdf", "job-state": 4, "job-originating-user-name": "demo", "job-printer-uri": "ipp://localhost/printers/Studio_Printer", "job-state-message": "Held for review"}]
+  },
+  "details": {
+    "name": "Studio_Printer",
+    "attributes": {"printer-is-accepting-jobs": true, "printer-error-policy": "stop-printer", "printer-op-policy": "default", "printer-error-policy-supported": ["abort-job", "retry-job", "stop-printer"], "printer-op-policy-supported": ["default", "authenticated"], "job-sheets-supported": ["none", "standard"], "job-sheets-default": ["none", "none"]},
+    "supplies": [{"name": "Black ink", "level": 82, "color": "#222222"}, {"name": "Cyan ink", "level": 18, "color": "#00ffff"}, {"name": "Magenta ink", "level": 65, "color": "#ff00ff"}, {"name": "Yellow ink", "level": 74, "color": "#ffff00"}],
+    "options": [{"key": "media", "label": "Paper size", "group": "IPP", "value": "iso_a4_210x297mm", "choices": [{"value": "iso_a4_210x297mm", "label": "A4"}, {"value": "na_letter_8.5x11in", "label": "Letter"}]}, {"key": "sides", "label": "Two-sided printing", "group": "IPP", "value": "one-sided", "choices": [{"value": "one-sided", "label": "One-sided"}, {"value": "two-sided-long-edge", "label": "Two-sided · long edge"}]}],
+    "warnings": []
+  },
+  "settings": {"_debug_logging": "0", "_share_printers": "0", "_remote_admin": "0", "_remote_any": "0", "_user_cancel_any": "0"},
+  "diagnostics": {"checks": [{"label": "CUPS connection", "ok": true, "detail": "Server responded to IPP."}, {"label": "Queue enabled", "ok": true, "detail": "Ready"}, {"label": "Ink supply", "ok": false, "detail": "Cyan ink is below 20%."}], "note": "Preview diagnostics · no hardware queried."}
+}

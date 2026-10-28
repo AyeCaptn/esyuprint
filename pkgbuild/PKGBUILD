@@ -1,0 +1,28 @@
+pkgname=esyuprint
+pkgver=0.2.0
+pkgrel=1
+pkgdesc='Standalone Omarchy-themed CUPS printer management'
+url='https://github.com/AyeCaptn/esyuprint'
+arch=('x86_64' 'aarch64')
+license=('GPL-2.0-or-later')
+depends=('qt6-base' 'qt6-declarative' 'qt6-wayland' 'python' 'python-pycups' 'python-dbus' 'system-config-printer' 'cups' 'cups-filters' 'cups-pk-helper' 'fontconfig' 'xdg-desktop-portal' 'gtk3')
+optdepends=('evince: print preview')
+makedepends=('gcc' 'make')
+source=()
+sha256sums=()
+
+build() {
+  cd "$startdir/.."
+  bash bin/build
+}
+
+package() {
+  cd "$startdir/.."
+  install -Dm755 build/esyuprint "$pkgdir/usr/bin/esyuprint"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
+  install -Dm644 pkgbuild/esyuprint.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/esyuprint.svg"
+  install -Dm644 pkgbuild/esyuprint.desktop "$pkgdir/usr/share/applications/esyuprint.desktop"
+  install -Dm644 pkgbuild/esyuprint.portal "$pkgdir/usr/share/xdg-desktop-portal/portals/esyuprint.portal"
+  install -Dm644 pkgbuild/org.freedesktop.impl.portal.desktop.esyuprint.service "$pkgdir/usr/share/dbus-1/services/org.freedesktop.impl.portal.desktop.esyuprint.service"
+}

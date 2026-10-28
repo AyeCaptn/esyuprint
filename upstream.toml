@@ -1,0 +1,25 @@
+# Baseline actually present during development; update after compatibility tests.
+[cups]
+source = "https://github.com/OpenPrinting/cups"
+version = "2.4.20"
+tag = "v2.4.20"
+commit = "ef80eeaea51430a055948240eea3f28ef5354edf"
+integration = "System pycups API; no bundled CUPS code"
+
+[pycups]
+source = "https://github.com/OpenPrinting/pycups"
+version = "2.0.4"
+tag = "v2.0.4"
+commit = "b323570087a10bf4ac399007d9e01e824fdafd80"
+integration = "System python-pycups, invoked with /usr/bin/python3"
+
+[system_config_printer]
+source = "https://github.com/OpenPrinting/system-config-printer"
+version = "1.5.18"
+tag = "v1.5.18"
+commit = "895d3dec50c93bfd4f142bac9bfcc13051bf84cb"
+integration = "Unmodified cupspk.Connection and cupshelpers.missingExecutables"
+
+[qt]
+source = "https://code.qt.io/qt/"
+version = "6.12.0"

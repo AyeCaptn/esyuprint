@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+mkdir -p build/tests
+cd build/tests
+qmake6 ../../tests/spool_tests.pro
+make -j"${JOBS:-$(nproc)}"
+dbus-run-session --config-file=../../tests/dbus-session.conf -- env ESYUPRINT_PRIVATE_TEST_BUS=1 QT_QPA_PLATFORMTHEME=generic GTK_USE_PORTAL=0 NO_AT_BRIDGE=1 QT_QPA_PLATFORM=offscreen QT_QUICK_BACKEND=software QT_FORCE_STDERR_LOGGING=1 ./esyuprint_tests "$@"
